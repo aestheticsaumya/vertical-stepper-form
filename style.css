@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-stepper-wrapper {
+    max-height: 100%;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.c-stepper {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.c-stepper__item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.c-stepper__item.active .c-stepper__title {
+    color: #007bff;
+}
+
+.c-stepper__item.active:before {
+    content: "";
+    position: absolute;
+    left: calc(var(--size) / 2);
+    top: 0;
+    bottom: calc(var(--size) + var(--spacing));
+    width: 2px;
+    background-color: #007bff;
+}
+
+.c-stepper__item:before {
+    --size: 1rem;
+    --spacing: 0.5rem;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(var(--size) / 2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: lightgrey;
+    z-index: 1;
+}
+
+.c-stepper__content {
+    flex: 1;
+    padding-left: 2rem;
+    border-left: 2px solid lightgrey;
+}
+
+.c-stepper__title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ccc;
+    z-index: 4;
+}
+
+.c-stepper__content p {
+    margin: 0;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#review-info {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+#review-info p {
+    margin-bottom: 1rem;
+}
+
+#review-personal, #review-education {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #007bff;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #666;
+}
